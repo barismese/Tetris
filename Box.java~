@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.util.*;
+import java.awt.*;
+
+public class Box
+{
+  private Rectangle box1;
+  private Color scolor; 
+  private int xpos;
+  private int ypos;
+  private boolean isBoxFilled;
+  private boolean isBoxFalling;
+  
+  public Box(int x,int y,boolean boxFilled)
+  {
+    xpos = x;
+    ypos = y;
+    isBoxFilled = boxFilled;
+    scolor = Color.BLACK;
+    isBoxFalling = false;
+  }
+  public Rectangle draw()
+  {
+    box1 = new Rectangle(xpos,ypos,50,50);
+    return box1;
+  }
+  public void fill(boolean filled)
+  {
+    isBoxFilled = filled;
+    
+  }
+  public boolean isBoxFill()
+  {
+    return isBoxFilled;
+  }
+  public void setBoxColor(Color boxcolor)
+  {
+    scolor = boxcolor;
+  }
+  public Color getBoxColor()
+  {
+    return scolor;
+  }
+  public void setBoxFalling(boolean falling)
+  {
+     isBoxFalling = falling;
+  }
+  public boolean isFalling()
+  {
+    return isBoxFalling;
+  }
+}
